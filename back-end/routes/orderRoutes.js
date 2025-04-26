@@ -1,21 +1,11 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const OrderController = require("../controllers/OrderController");
-const { authMiddleware } = require("../middleware/auth"); // Xác thực người dùng
+const { updateOrderStatus, handleSuccessfulPayment } = require('../controllers/orderController');
 
-//  Lấy danh sách đơn hàng của người dùng
-router.get("/orders/customer/:customerId", authMiddleware, OrderController.getOrdersByCustomerId);
-router.get('/orders', OrderController.getAllOrders);
-router.post("/create", OrderController.createPaymentLink);
-router.patch('/orders/:orderId/payment-status', OrderController.updatePaymentStatus);
-router.put('/orders/:orderId/status', OrderController.updateOrderStatus);
-router.put('/orders/:orderId/confirm-success', authMiddleware, OrderController.confirmOrderSuccess);
-router.post('/orders/:orderId/return', authMiddleware, OrderController.requestOrderReturn);
+// Update order status
+router.put('/:orderId/status', updateOrderStatus);
 
-// Tra cứu bảo hành (yêu cầu đăng nhập)
-router.get('/warranty', authMiddleware, OrderController.checkWarranty);
+// Handle successful payment
+router.post('/:orderId/payment/success', handleSuccessfulPayment);
 
-// Tra cứu bảo hành công khai (không yêu cầu đăng nhập)
-router.get('/warranty/public', OrderController.checkWarrantyPublic);
-
-module.exports = router;
+module.exports = router; 
