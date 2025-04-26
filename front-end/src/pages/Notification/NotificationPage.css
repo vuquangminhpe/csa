@@ -1,0 +1,123 @@
+.notification-wrapper {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-height: 700px; /* Giữ chiều cao cố định */
+}
+
+.notification-sidebar {
+    width: 250px;
+    border-right: 1px solid #ddd;
+    padding-right: 15px;
+    flex-shrink: 0; /* Ngăn sidebar bị co nhỏ */
+}
+
+.notification-sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.notification-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notification-sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.notification-sidebar li:hover,
+.notification-sidebar .active {
+    background: #ff4d4f;
+    color: white;
+    border-radius: 5px;
+}
+
+.notification-content {
+    flex: 1;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px; /* Giữ chiều cao cố định */
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.notification-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mark-all-btn {
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.notification-list {
+    flex-grow: 1; /* Cho phép danh sách chiếm hết phần còn lại */
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    min-height: 350px; /* Đảm bảo danh sách luôn giữ độ cao cố định */
+}
+
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease;
+}
+
+.notification-item.unread {
+    background: #f2e7e0;
+}
+
+.notification-item:hover {
+    background: #dfc8c8;
+}
+
+.notification-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-message {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.notification-time {
+    font-size: 14px;
+    color: gray;
+}
+
+.no-notifications {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+    flex-grow: 1; /* Đảm bảo không bị co nhỏ khi không có thông báo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 15px;
+}

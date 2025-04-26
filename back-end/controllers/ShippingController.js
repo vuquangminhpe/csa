@@ -12,6 +12,11 @@ const generateTrackingNumber = () => {
   return "GU" + crypto.randomBytes(5).toString("hex").toUpperCase();
 };
 
+// Hàm tạo mã đơn hàng
+const generateOrderCode = () => {
+  return "ORD-" + Date.now().toString().substr(-8);
+};
+
 // Tính khoảng cách giữa hai tọa độ (Haversine formula)
 const calculateDistance = (lat1, lon1, lat2, lon2) => {
   const R = 6371; // Bán kính trái đất tính bằng km
@@ -53,11 +58,58 @@ exports.createShipment = async (req, res) => {
       });
     }
 
-    // Kiểm tra trạng thái đơn hàng
+    // Kiểm tra và đảm bảo order có tất cả các trường cần thiết
+    // Order có thể đã được tạo từ mô hình Order.js (không phải Orders.js)
+
+    // Đảm bảo trạng thái đơn hàng
+    // Nếu order.status là 'pending' từ checkout controller, chuyển sang 'Đã xác nhận'
+    if (order.status === "pending") {
+      order.status = "Đã xác nhận";
+    }
+
     if (order.status !== "Đã xác nhận") {
       return res.status(400).json({
         success: false,
         message: `Đơn hàng hiện đang ở trạng thái ${order.status}, không thể tạo vận đơn`,
+      });
+    }
+
+    // Đảm bảo có order_code
+    if (!order.order_code) {
+      order.order_code = generateOrderCode();
+    }
+
+    // Đảm bảo có total_price, chuyển đổi từ total nếu cần
+    if (!order.total_price && order.total) {
+      order.total_price = order.total;
+    } else if (!order.total_price && order.items && order.items.length > 0) {
+      order.total_price = order.items.reduce(
+        (sum, item) => sum + (item.price || 0) * (item.quantity || 1),
+        0
+      );
+    }
+
+    // Đảm bảo có customer_id
+    const userId = req.user ? req.user.userId : null;
+    if (!order.customer_id) {
+      // Thử các trường khác nhau có thể chứa ID người dùng
+      order.customer_id =
+        userId || order.userId || (order.customer && order.customer._id);
+    }
+
+    // Validate các trường bắt buộc trước khi tiếp tục
+    if (!order.order_code || !order.customer_id || !order.total_price) {
+      console.error("Missing required fields:", {
+        order_code: order.order_code,
+        customer_id: order.customer_id,
+        total_price: order.total_price,
+      });
+
+      return res.status(400).json({
+        success: false,
+        message: "Đơn hàng không đủ thông tin cần thiết để tạo vận đơn",
+        error:
+          "Thiếu một hoặc nhiều trường: total_price, order_code, customer_id",
       });
     }
 
@@ -104,6 +156,15 @@ exports.createShipment = async (req, res) => {
 
     // Cập nhật trạng thái đơn hàng
     order.status = "Đang chuẩn bị giao";
+
+    console.log("Saving order with fields:", {
+      _id: order._id,
+      customer_id: order.customer_id,
+      order_code: order.order_code,
+      total_price: order.total_price,
+      status: order.status,
+    });
+
     await order.save();
 
     // Tạo thông báo cho khách hàng

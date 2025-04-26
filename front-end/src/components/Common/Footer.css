@@ -1,0 +1,97 @@
+/* Footer chính */
+.footer {
+  background-color: #212529; /* Màu nền tối */
+  color: white;
+  padding: 20px 0; /* Tăng padding để footer không quá nhỏ */
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  position: relative; /* Giữ relative để footer nằm dưới nội dung */
+  margin-top: auto; /* Đẩy footer xuống khi nội dung ít */
+}
+
+/* Logo */
+.footer img {
+  width: 100px; /* Kích thước logo nhỏ hơn */
+  margin-bottom: 10px;
+}
+
+/* Tiêu đề */
+.footer h5 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Văn bản và link */
+.footer p,
+.footer a {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Danh sách menu */
+.footer .list-group-item {
+  padding: 4px 0;
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+.footer .list-group-item a {
+  color: white;
+}
+
+.footer .list-group-item a:hover {
+  text-decoration: underline;
+}
+
+/* Đảm bảo layout luôn đẩy footer xuống cuối */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root, .app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #007bff;
+}
+
+.list-group-item {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 0;
+}
+
+.list-group-item a {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 0;
+}
+
+/* Container width */
+.footer .container {
+  max-width: 960px; /* Thêm giới hạn chiều rộng tối đa */
+  margin: 0 auto;
+}
+

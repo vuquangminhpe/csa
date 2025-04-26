@@ -1,0 +1,144 @@
+.category-manager {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.category-manager__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.category-manager__header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Table styles - giống MangerProduct */
+.category-manager .ant-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.category-manager .ant-table-thead > tr > th {
+  background: #f0f0f0;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+.category-manager .ant-table-tbody > tr > td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.category-manager .ant-table-tbody > tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Button styles - giống MangerProduct */
+.category-manager .ant-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-manager .ant-btn-primary {
+  background: #4CAF50;
+  border: none;
+  color: white;
+}
+
+.category-manager .ant-btn-primary:hover {
+  background: #45a049;
+}
+
+.category-manager .ant-btn-danger {
+  background: #ff4d4f;
+  border: none;
+  color: white;
+}
+
+.category-manager .ant-btn-danger:hover {
+  background: #ff3333;
+}
+
+/* Modal styles - giống MangerProduct */
+.category-manager .ant-modal-content {
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.category-manager .ant-modal-header {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.category-manager .ant-modal-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.category-manager .ant-form-item-label > label {
+  font-weight: 500;
+  color: #333;
+}
+
+.category-manager .ant-input,
+.category-manager .ant-input-textarea {
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  padding: 8px 12px;
+}
+
+.category-manager .ant-input:focus,
+.category-manager .ant-input-textarea:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Space between buttons */
+.category-manager .ant-space {
+  gap: 8px;
+}
+
+/* Add button in header */
+.category-manager .ant-btn-primary.add-category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #4CAF50;
+}
+
+.category-manager .ant-btn-primary.add-category:hover {
+  background: #45a049;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .category-manager__header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .category-manager__header h2 {
+    margin-bottom: 0;
+  }
+  
+  .category-manager .ant-table {
+    font-size: 14px;
+  }
+  
+  .category-manager .ant-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+} 

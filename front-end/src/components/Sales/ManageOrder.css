@@ -1,0 +1,143 @@
+/* Định dạng tổng thể */
+.order-management {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .order-management__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Bảng */
+  .order-management__table {
+    background-color: white !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .order-management__thead {
+    background-color: #007bff !important;
+    color: white !important;
+  }
+  
+  .order-management__row:hover {
+    background-color: #f1f1f1 !important;
+  }
+  
+  .order-management__cell {
+    padding: 10px !important;
+    text-align: center !important;
+    border-bottom: 1px solid #ddd !important;
+  }
+
+  .order-management__product-name div:not(:last-child) {
+    border-bottom: 1px solid #ddd !important;
+    padding-bottom: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  
+  /* Trạng thái đơn hàng */
+  .order-management__status-label {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    background-color: #edf2f7;
+  }
+  
+  .order-management__status-label.đang-xử-lý {
+    background-color: #bee3f8;
+    color: #2b6cb0;
+  }
+  
+  .order-management__status-label.đã-xác-nhận {
+    background-color: #c6f6d5;
+    color: #2f855a;
+  }
+  
+  .order-management__status-label.đang-giao {
+    background-color: #feebc8;
+    color: #c05621;
+  }
+  
+  .order-management__status-label.đã-giao {
+    background-color: #c6f6d5;
+    color: #2f855a;
+  }
+  
+  .order-management__status-label.đã-hủy {
+    background-color: #fed7d7;
+    color: #c53030;
+  }
+  
+  /* Giá */
+  .order-management__price {
+    font-weight: bold !important;
+    color: red !important;
+  }
+  
+  /* Nút hành động */
+  .order-management__action-button {
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .order-management__action-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }
+
+  .order-management__action-button:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  /* Dropdown menu */
+.order-management__dropdown {
+  position: absolute !important;
+  right: 0 !important;
+  background: white !important;
+  border: 1px solid #ddd !important;
+  border-radius: 5px !important;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2) !important;
+  z-index: 10 !important;
+  display: none !important;
+}
+
+.order-management__dropdown--active {
+  display: block !important;
+}
+
+.order-management__dropdown-item {
+  padding: 10px !important;
+  cursor: pointer !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+
+.order-management__dropdown-item:hover {
+  background-color: #f1f1f1 !important;
+}
+
+.order-management__payment-status.payment-failed {
+  color: #e53e3e;
+  font-weight: 600;
+}
+
+.order-management__payment-status.payment-pending {
+  color: #dd6b20;
+  font-weight: 600;
+}
+
+.order-management__payment-status.payment-success {
+  color: #38a169;
+  font-weight: 600;
+}

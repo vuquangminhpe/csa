@@ -1,0 +1,136 @@
+/* Hiệu ứng bóng cho thẻ đơn hàng và chi tiết */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Bảng đơn hàng đẹp hơn */
+  .table {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table thead {
+    background-color: #f8f9fa;
+  }
+  
+  .table thead th {
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Nút "Xem chi tiết" nổi bật hơn */
+  .btn-info {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-info:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* Alert đẹp hơn */
+  .alert {
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 1rem;
+  }
+  
+  /* Hình ảnh sản phẩm đẹp hơn */
+  img {
+    border-radius: 8px;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Tiêu đề và bố cục */
+  h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #343a40;
+  }
+  
+  /* Nút đóng chi tiết đơn hàng */
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
+  
+  /* Đơn hàng không có */
+  .empty-orders {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+  
+
+  /* Thêm vào file Order.css */
+.order-status-table-container {
+  overflow-x: auto;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.order-status-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.status-cell {
+  padding: 10px 15px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  width: calc(100% / 8); /* Chia đều 8 cột thay vì 9 */
+}
+
+.status-cell:hover {
+  background-color: #f8f9fa;
+}
+
+.status-cell.active {
+  border-bottom: 2px solid #007bff;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.status-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-content span {
+  white-space: nowrap;
+  margin-bottom: 5px;
+}

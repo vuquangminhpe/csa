@@ -1,0 +1,42 @@
+.order-processing .card {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-details {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.order-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.item-name {
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+.item-details p {
+    margin-bottom: 5px;
+}
+
+.card-footer {
+    background-color: white;
+    padding: 20px;
+}
+
+.payment-status {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.payment-status button {
+    margin-top: 10px;
+} 

@@ -1,0 +1,371 @@
+.manage-posts {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.manage-posts__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.manage-posts__title {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+.manage-posts__add-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.manage-posts__add-button i {
+  margin-right: 8px;
+}
+
+.manage-posts__add-button:hover {
+  background-color: #45a049;
+}
+
+.manage-posts__table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.manage-posts__table th,
+.manage-posts__table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.manage-posts__table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+  color: #333;
+}
+
+.manage-posts__table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.manage-posts__thumbnail {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.manage-posts__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.manage-posts__edit-button,
+.manage-posts__delete-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.manage-posts__edit-button {
+  color: #2196F3;
+}
+
+.manage-posts__edit-button:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.manage-posts__delete-button {
+  color: #f44336;
+}
+
+.manage-posts__delete-button:hover {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.manage-posts__empty {
+  text-align: center;
+  padding: 20px;
+  color: #757575;
+}
+
+.manage-posts__loading,
+.manage-posts__error {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+}
+
+.manage-posts__error {
+  color: #f44336;
+}
+
+/* Form overlay */
+.manage-posts__form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.manage-posts__form-container {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.manage-posts__form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.manage-posts__form-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.manage-posts__close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #757575;
+}
+
+.manage-posts__close-button:hover {
+  color: #333;
+}
+
+.manage-posts__form {
+  padding: 20px;
+}
+
+.manage-posts__form-group {
+  margin-bottom: 20px;
+}
+
+.manage-posts__form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.manage-posts__input,
+.manage-posts__textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.manage-posts__textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.manage-posts__file-input {
+  display: block;
+  margin-top: 8px;
+}
+
+.manage-posts__help-text {
+  display: block;
+  margin-top: 5px;
+  color: #757575;
+  font-size: 12px;
+}
+
+.manage-posts__selected-files {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.manage-posts__selected-files p {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.manage-posts__selected-files ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.manage-posts__selected-files li {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.manage-posts__remove-file {
+  background: none;
+  border: none;
+  color: #f44336;
+  cursor: pointer;
+  padding: 2px 5px;
+  font-size: 12px;
+}
+
+.manage-posts__remove-file:hover {
+  background-color: rgba(244, 67, 54, 0.1);
+  border-radius: 50%;
+}
+
+.manage-posts__current-images {
+  margin-top: 15px;
+}
+
+.manage-posts__current-images p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.manage-posts__image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.manage-posts__image-item {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.manage-posts__image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manage-posts__delete-image {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.manage-posts__delete-image:hover {
+  opacity: 1;
+}
+
+.manage-posts__image-item:hover .manage-posts__delete-image {
+  opacity: 1;
+}
+
+.manage-posts__checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.manage-posts__checkbox-group input {
+  margin-right: 8px;
+}
+
+.manage-posts__form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.manage-posts__cancel-button,
+.manage-posts__submit-button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.manage-posts__cancel-button {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.manage-posts__cancel-button:hover {
+  background-color: #e0e0e0;
+}
+
+.manage-posts__submit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.manage-posts__submit-button:hover {
+  background-color: #45a049;
+}
+
+.manage-posts__rich-editor {
+  margin-bottom: 20px;
+}
+
+.manage-posts__rich-editor .ql-container {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: #fff;
+  min-height: 200px;
+}
+
+.manage-posts__rich-editor .ql-toolbar {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background: #f8f8f8;
+}
+
+.manage-posts__rich-editor .ql-editor {
+  min-height: 200px;
+  font-size: 14px;
+} 

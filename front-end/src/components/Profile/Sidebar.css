@@ -1,0 +1,34 @@
+.user-sidebar {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.user-sidebar__title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.user-sidebar__menu {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.user-sidebar__item {
+  margin-bottom: 0.5rem;
+}
+
+.user-sidebar__link {
+  display: block;
+  padding: 8px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.user-sidebar__link:hover {
+  background-color: #dc3545; /* Màu đỏ Bootstrap (danger) */
+  color: white;
+}
+  

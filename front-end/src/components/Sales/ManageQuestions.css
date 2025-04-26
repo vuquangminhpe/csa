@@ -1,0 +1,204 @@
+.manage-questions-container_qa {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .manage-questions-title_qa {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .question-filter_qa {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .question-filter-btn_qa {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .question-filter-btn_qa.active {
+    background: red;
+    color: white;
+    border: 1px solid red;
+  }
+  
+  .question-item_qa {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #fafafa;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .question-item_qa:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #f5f5f5;
+  }
+  
+  .question-product_qa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .question-product-name_qa {
+    font-weight: bold;
+  }
+  
+  .question-text_qa {
+    font-size: 15px;
+    margin: 10px 0;
+  }
+  
+  .question-answers_qa {
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .answer-item_qa {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 8px;
+  }
+  
+  .answer-avatar_qa {
+    background: red;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .answer-content_qa {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .answer-text_qa {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .answer-time_qa {
+    font-size: 12px;
+    color: gray;
+  }
+  .red-button_qa {
+    background-color: red !important;
+    border-color: red !important;
+  }
+  
+  .red-button_qa:hover {
+    background-color: darkred !important;
+    border-color: darkred !important;
+  }
+  
+  .edit-button_qa {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: #1890ff;
+  }
+  
+  .edit-button_qa:hover {
+    color: #40a9ff;
+    background: rgba(24, 144, 255, 0.1);
+  }
+  
+  .answer-container_qa {
+    margin: 10px 0;
+  }
+  
+  .question-stats_qa {
+    margin-top: 8px;
+    color: #666;
+    font-size: 13px;
+    display: flex;
+    gap: 8px;
+  }
+  
+  .question-status_qa {
+    font-weight: 500;
+  }
+  
+  .question-status_qa.pending {
+    color: #faad14;
+  }
+  
+  .question-status_qa.approved {
+    color: #52c41a;
+  }
+  
+  .question-status_qa.rejected {
+    color: #ff4d4f;
+  }
+  
+  .question-status_qa.removed {
+    color: #595959;
+  }
+  
+  /* Làm tối các câu hỏi bị từ chối và đã gỡ */
+  .question-item_qa[data-status="rejected"],
+  .question-item_qa[data-status="removed"] {
+    background: #f0f0f0;
+    opacity: 0.8;
+  }
+  
+  .question-item_qa[data-status="rejected"]:hover,
+  .question-item_qa[data-status="removed"]:hover {
+    background: #e8e8e8;
+  }
+  
+  .question-detail_qa {
+    padding: 20px 0;
+  }
+  
+  .question-header_qa {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .question-header_qa h4 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .question-content_qa {
+    font-size: 15px;
+    margin: 16px 0;
+    padding: 12px;
+    background: #f5f5f5;
+    border-radius: 8px;
+  }
+  
+  .answers-section_qa {
+    margin-top: 24px;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+  }
+  
+  .answers-section_qa h4 {
+    margin-bottom: 16px;
+  }
+  

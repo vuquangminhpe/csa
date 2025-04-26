@@ -1,0 +1,103 @@
+.category-container {
+  position: relative;
+}
+
+.category-dropdown {
+  width: 250px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+/* Mục danh mục chính */
+.category-item {
+  position: relative;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000; /* Chuyển thành màu đen */
+  text-decoration: none; /* Bỏ gạch chân */
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.category-item:hover {
+  background: #f4f4f4;
+}
+
+.category-item i {
+  margin-left: auto;
+  color: #888;
+  transition: transform 0.3s ease;
+}
+
+.category-item:hover i {
+  transform: translateX(5px);
+  color: #000;
+}
+
+/* Sub-menu */
+.sub-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 220px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: visibility 0s linear 0.2s, opacity 0.2s linear, transform 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+/* Hiển thị sub-menu khi hover vào category hoặc sub-menu */
+.category-item:hover .sub-menu,
+.sub-menu:hover {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Tiêu đề sub-menu */
+.sub-menu h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000; /* Chuyển thành màu đen */
+}
+
+/* Danh sách trong sub-menu */
+.sub-menu ul {
+  padding: 0;
+}
+
+.sub-menu li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #000; /* Chuyển thành màu đen */
+  text-decoration: none; /* Bỏ gạch chân */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.sub-menu li:hover {
+  color: #007bff;
+}
+
+.category-item a,
+.sub-menu a {
+  text-decoration: none;
+  color: #000; 
+}
+
+.category-item a:hover,
+.sub-menu a:hover {
+  color: #007bff;
+}

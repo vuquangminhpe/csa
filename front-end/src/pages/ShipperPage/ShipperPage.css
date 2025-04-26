@@ -1,0 +1,118 @@
+.shipper-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header chứa logo và menu ngang */
+.shipper-page__header {
+  display: flex;
+  align-items: center;
+  background-color: #1e293b;
+  color: white;
+  padding: 0 20px;
+  height: 70px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.shipper-page__logo-container {
+  margin-right: 30px;
+}
+
+.shipper-page__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.shipper-page__menu {
+  display: flex;
+  gap: 15px;
+}
+
+.sidebar__button {
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.sidebar__button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar__button--active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Nội dung chính */
+.shipper-page__content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8fafc;
+  padding-top: 90px;
+}
+
+.shipper-page__title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #334155;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shipper-page__header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+  
+  .shipper-page__logo-container {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .shipper-page__menu {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .sidebar__button {
+    flex: 1;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+/* Thêm style cho nút đăng xuất */
+.logout-button-shipper {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background-color: #1e293b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button-shipper:hover {
+  background-color: #334155;
+}
+
+.logout-button-shipper i {
+  font-size: 16px;
+} 

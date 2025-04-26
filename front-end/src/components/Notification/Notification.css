@@ -1,0 +1,154 @@
+/* 🔔 Container chính của dropdown thông báo */
+.notification-dropdown_ntf {
+    width: 350px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    font-family: "Arial", sans-serif;
+}
+
+/* 🔗 Header của thông báo */
+.notification-header_ntf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 🏷 Tiêu đề "Thông báo" */
+.notification-header_ntf h4 {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* ✅ Nút "Đánh dấu đã đọc tất cả" */
+.mark-all-btn_ntf {
+    font-size: 12px;
+    color: #52c41a;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.mark-all-btn_ntf:disabled {
+    color: gray;
+    cursor: not-allowed;
+}
+
+/* 🎛 Tabs bộ lọc (Tất cả, Bình luận, Giao dịch, Đơn hàng) */
+.notification-tabs_ntf {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 5px;
+}
+
+.filter-btn_ntf {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn_ntf.active_ntf {
+    background: red;
+    color: white;
+    border: none;
+}
+
+.filter-btn_ntf:hover {
+    background: rgba(255, 0, 0, 0.7);
+    color: white;
+}
+
+/* 📜 Danh sách thông báo */
+.notification-list_ntf {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* 🔹 Item thông báo */
+.notification-item_ntf {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+}
+
+/* 🚀 Khi chưa đọc sẽ có màu xanh nhạt */
+.notification-item_ntf.unread_ntf {
+    background: rgba(205, 133, 75, 0.1);
+}
+
+/* 🏁 Khi đã đọc sẽ là màu trắng */
+.notification-item_ntf.read_ntf {
+    background: white;
+}
+
+/* 📝 Nội dung thông báo */
+.notification-content_ntf {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* 🖤 Chữ đen, đậm */
+.notification-message_ntf {
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+}
+
+/* 🕒 Thời gian thông báo */
+.notification-time_ntf {
+    font-size: 12px;
+    color: gray;
+}
+
+/* 🔗 Button "Xem chi tiết" */
+.view-detail-btn_ntf {
+    font-size: 14px;
+    color: #007bff;
+    font-weight: bold;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.view-detail-btn_ntf:hover {
+    text-decoration: underline;
+}
+
+/* 📌 Xem tất cả thông báo */
+.view-all-btn_ntf {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #f8f8f8;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn_ntf:hover {
+    background: #e0e0e0;
+}
+
+/* 🛑 Badge số lượng thông báo */
+.notification-badge_ntf {
+    cursor: pointer;
+}
+
+.notification-icon_ntf {
+    font-size: 22px;
+    color: #333;
+}

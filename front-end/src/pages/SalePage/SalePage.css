@@ -1,0 +1,137 @@
+/* SalePage.css */
+
+/* Wrapper chính */
+.sale-page {
+    display: flex;
+    /* height: 100vh; */
+
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  /* Sidebar */
+  .sale-page__sidebar {
+    width: 260px;
+    background-color: #dc3545; /* Bootstrap Danger Color */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto; /* Cho phép scroll */
+    z-index: 1000;
+  }
+  
+  /* Thanh cuộn tùy chỉnh cho sidebar */
+  .sale-page__sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .sale-page__sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .sale-page__sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+  }
+  
+  .sale-page__sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Sidebar header */
+  .sale-page__sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #dc3545;
+    padding: 10px 0;
+    z-index: 1;
+  }
+  
+  .sale-page__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Sidebar menu */
+  .sale-page__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px; /* Thêm padding bottom để tránh bị che khuất */
+  }
+  
+  /* Sidebar button */
+  .sidebar__button {
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 15px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.1s ease-in-out;
+  }
+  
+  .sidebar__button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Sidebar button active */
+  .sidebar__button--active {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+    transform: scale(1.05);
+  }
+  
+  /* Nội dung chính */
+  .sale-page__content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-left: 260px; /* Để không bị đè bởi sidebar */
+    min-height: 100vh;
+    padding-top: 70px;
+  }
+  
+  .sale-page__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Thêm style cho nút đăng xuất */
+  .logout-button-sale {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button-sale:hover {
+    background-color: #c82333;
+  }
+  
+  .logout-button-sale i {
+    font-size: 16px;
+  }
+  
